@@ -1,0 +1,25 @@
+// Breakpoints
+$bp1: 1280px;
+$bp2: 900px;
+$bp2_3: 756px;
+$bp3: 376px;
+
+// Portait iphone6
+$bp3_4: 320px;
+$bp4: 250px;
+
+// Base
+$padding_base: 40px;
+$line-height-base: 1.5;
+
+// Colors
+$color-black: rgb(0, 0, 0);
+$color-base: rgb(51, 255, 226);
+$color-base-alpha: rgba(0, 0, 255, 0.5);
+$color-alt: $color-black;
+$color-black-suave: rgba(0, 0, 0, 0.3);
+$color-white: rgb(255, 255, 255);
+$color-resaltado: rgb(51, 255, 226);
+
+// Images
+$image-path: "/assets/img/";

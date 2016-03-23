@@ -1,0 +1,26 @@
+// Settings
+$base_spacing: 30px;
+$spacing: 10;
+$path: "../assets/img/";
+// Colors
+$color_base: SaddleBrown;
+$color_white: white;
+$color_black: rgb(0,0,0);
+$color_gray: lighten($color_black, 72);
+$color_alt: rgb(251,210,189);
+$colors: (
+  red: red,
+  white: $color_black,
+  blue: blue,
+  yellow: yellow,
+  green: green,
+  violet: rgb(150,50,175)
+);
+@each $name, $color in $colors {
+  .#{$name} {
+    fill: $color;
+  }
+}
+body {
+  background-color: pink;
+}
