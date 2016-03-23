@@ -5,7 +5,7 @@ Single Page Webapp basada en ES6 y React que ataca una base de datos Firebase (B
 
 :scream:
 - [DEMO hosted in Firebase](https://sergiofores.firebaseapp.com)
-- [DEMO hosted in gh-pages](http://t0t.github.io/ssfire)
+- [DEMO hosted in gh-pages](http://t0t.github.io/sffire)
 
 ## Divide y vencerás
 - Firebase BaaS (Backend as a service)
