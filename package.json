@@ -10,6 +10,7 @@
     "fenix": "rimraf node_modules && npm i",
     "start": "webpack-dev-server"
   },
+  "homepage": "https://github.com/t0t/sffire",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/t0t/sffire.git"
