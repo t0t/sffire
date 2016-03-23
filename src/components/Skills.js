@@ -40,11 +40,11 @@ export default class Skills extends Component {
     //   return <Skill {...skill} />
     // })
     return (
-      <div>
+      <section>
         <h1>{this.state.data.title}</h1>
         <p>{this.state.data.dev}</p>
         <p>{this.state.data.experiencia}</p>
-      </div>
+      </section>
     )
   }
 }

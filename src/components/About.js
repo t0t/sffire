@@ -36,11 +36,11 @@ export default class About extends Component {
   render() {
     this.getAboutPage();
     return (
-      <div>
-        <h1>{this.state.page.title}</h1>
+      <section>
+        <h2>{this.state.page.title}</h2>
         <p>{this.state.page.desc}</p>
         <a href="{this.state.page.email}">{this.state.page.email}</a>
-      </div>
+      </section>
     )
   }
 }

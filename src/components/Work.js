@@ -8,7 +8,9 @@ export default class Work extends Component {
         <figure>
           <img src={this.props.image} />
           <figcaption>
-            <span>{this.props.url}</span>
+            <a href={this.props.url} target="_blank">
+              {this.props.url}
+            </a>
           </figcaption>
         </figure>
       </div>

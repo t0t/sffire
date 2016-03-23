@@ -31,10 +31,10 @@ export default class Page extends Component {
     })
 
     return (
-      <div>
-        <h1>PAGE</h1>
+      <section>
+        <h2>Page</h2>
         {pages}
-      </div>
+      </section>
     )
   }
 }

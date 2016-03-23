@@ -1,0 +1,17 @@
+.Site {
+  margin: $base_spacing;
+  // min-height: 100vh;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-between;
+  &__header {
+    line-height: 1;
+  }
+  &__footer {
+    line-height: 1;
+    align-self: center;
+    align-content: flex-end;
+    margin-top: $base_spacing;
+    margin-bottom: $base_spacing;
+  }
+}

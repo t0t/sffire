@@ -1,0 +1,13 @@
+.Nav-main {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 0;
+  list-style: none;
+  &__item {
+    margin-bottom: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}

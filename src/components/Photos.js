@@ -30,10 +30,10 @@ export default class Photos extends Component {
     })
     console.log(photosArray);
     return (
-      <div>
-        <h1>Photo Gallery</h1>
+      <section>
+        <h2>Photo Gallery</h2>
         {photosArray}
-      </div>
+      </section>
     );
   }
 }

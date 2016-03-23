@@ -1,8 +1,9 @@
 // CSS Architecture
-// @import '_reset';
+@import 'reset';
 @import "settings";
 @import "./base/base";
-@import "./components/site-nav";
+@import "./base/site";
+@import "./components/navigation";
 
 
 // @import '_mixins';

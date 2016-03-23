@@ -12,22 +12,25 @@ import Works from './components/Works'
 import Blog from './components/Blog'
 import Photos from './components/Photos'
 import Skills from './components/Skills'
+import Header from './components/Header'
+import Footer from './components/Footer'
 
 class App extends Component {
   render() {
     return (
-      <div className="site">
-        <h1>SFFIRE</h1>
-        <ul className="site-nav">
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/works">Works</Link></li>
-          <li><Link to="/page">Pages</Link></li>
-          <li><Link to="/blog">Blog</Link></li>
-          <li><Link to="/skills">Skills</Link></li>
-          <li><Link to="/photos">Photos</Link></li>
+      <main className="Site">
+        <Header/>
+        <ul className="Nav-main">
+          <li className="Nav-main__item"><Link to="/about">About</Link></li>
+          <li className="Nav-main__item"><Link to="/works">Works</Link></li>
+          <li className="Nav-main__item"><Link to="/page">Pages</Link></li>
+          <li className="Nav-main__item"><Link to="/blog">Blog</Link></li>
+          <li className="Nav-main__item"><Link to="/skills">Skills</Link></li>
+          <li className="Nav-main__item"><Link to="/photos">Photos</Link></li>
         </ul>
         {this.props.children}
-      </div>
+        <Footer/>
+      </main>
     )
   }
 }
