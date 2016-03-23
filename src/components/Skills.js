@@ -1,24 +1,50 @@
-import React from 'react';
-import Firebase from 'firebase';
+import React, { Component } from 'react';
+import Skill from './Skill';
 
-class Skills extends React.Component {
-  constructor(props){
+import Rebase from 're-base'
+var base = Rebase.createClass('https://sergiofores.firebaseio.com/');
+
+export default class Skills extends Component {
+  constructor(props) {
     super(props);
-    this.content = {};
-    this.url = 'https://sergiofores.firebaseapp.com/';
+    this.state = {
+      tools: [],
+      pags: [],
+      data: {}
+    };
   }
-  render() {
-    let ref = new Firebase("https://sergiofores.firebaseio.com/blog/1/content");
-    ref.on("value", (snapshot) => { this.content = snapshot.val(); });
 
+  componentDidMount(){
+    this.pageRef = base.bindToState('skills/tools', {
+      context: this,
+      state: 'tools',
+      asArray: true
+    });
+  }
+
+  componentWillUnmount(){
+    base.removeBinding(this.pageRef);
+  }
+
+  getData(){
+    base.fetch('skills', {
+      context: this,
+      asArray: false,
+      then(data){ this.state.data = data; }
+    });
+  }
+
+  render() {
+    this.getData();
+    // var skill = this.state.tools.map(function(skill){
+    //   return <Skill {...skill} />
+    // })
     return (
-      <section>
-        <h1>{this.content.header}</h1>
-        <img src={this.url+this.content.img}/>
-        <p>{this.content.p}qq</p>
-      </section>
+      <div>
+        <h1>{this.state.data.title}</h1>
+        <p>{this.state.data.dev}</p>
+        <p>{this.state.data.experiencia}</p>
+      </div>
     )
   }
 }
-
-export default Skills;

@@ -1,32 +1,41 @@
-import React from 'react';
-import Firebase from 'firebase';
+import React from 'react'
+import Rebase from 're-base'
+import Work from './Work'
+
+const base = Rebase.createClass('https://sergiofores.firebaseio.com/')
 
 class Works extends React.Component {
-
   constructor(props){
     super(props);
-    this.val = {};
     this.state = {
-      test: 'Bienvenido',
-      test2: 'test'
+      works: []
     };
+  }
+  componentDidMount(){
+    this.photosRef = base.bindToState('works', {
+      context: this,
+      state: 'works',
+      asArray: true
+    });
+  }
+
+  componentWillUnmount(){
+    base.removeBinding(this.photosRef);
   }
 
   render() {
-    let ref = new Firebase("https://sergiofores.firebaseio.com/portafolio/graphic/catalogos");
-    ref.on("value", (snapshot) => {
-      snapshot.forEach( (childSnapshot) => {
-        this.val = childSnapshot.val();
-      });
-    });
+    console.log(this.state);
+    console.log(this.state.works);
+    console.log(this.props.children);
+    let worksList = this.state.works.map(function(data){
+      return <Work {...data} />
+    })
     return (
-      <section>
-        <h1>{this.val.title}bb</h1>
-        <p>{this.val.description}xx</p>
-        <p>{this.state.test}</p>
-      </section>
+      <div>
+        {worksList}
+      </div>
     )
   }
 }
 
-export default Works;
+export default Works
