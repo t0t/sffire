@@ -1,6 +1,0 @@
-**/node_modules/**
-*-export.json
-firebase-debug.log
-.git
-node_modules
-.DS_Store
