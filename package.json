@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack",
     "clean": "rm -rf dist",
-    "deploy": "gh-pages -d dist -m \"Updates --skip-ci\"",
+    "deploy": "gh-pages -d dist -m \"Updates\"",
     "fenix": "rimraf node_modules && npm i",
     "start": "webpack-dev-server"
   },
