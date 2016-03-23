@@ -16,9 +16,9 @@ import Skills from './components/Skills'
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className="site">
         <h1>SFFIRE</h1>
-        <ul>
+        <ul className="site-nav">
           <li><Link to="/about">About</Link></li>
           <li><Link to="/works">Works</Link></li>
           <li><Link to="/page">Pages</Link></li>
