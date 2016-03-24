@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
-import Rebase from 're-base';
+import React, { Component } from 'react'
+import Rebase from 're-base'
 var base = Rebase.createClass('https://sergiofores.firebaseio.com/');
 // import { browserHistory, Router, Route, Link } from 'react-router'
 
-import IconUmbrella from './Icons';
+import { IconUmbrella } from './Icons'
+import { Link } from 'react-router'
 
 export default class Header extends Component {
   constructor(props) {
@@ -37,9 +38,10 @@ export default class Header extends Component {
     this.getPage();
     return (
       <header className="Site__header">
-        <h1>{this.state.brand.name}</h1>
-        <h2>{this.state.brand.title}</h2>
-        <IconUmbrella />
+        <Link to="/">
+          <h1><IconUmbrella /> {this.state.brand.name}</h1>
+        </Link>
+        <h5>{this.state.brand.title}</h5>
       </header>
     )
   }

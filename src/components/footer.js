@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-// import {render} from 'react-dom';
+import { IconLogo, IconCC } from './Icons';
 
 export default class Footer extends Component {
   render() {
     return (
       <footer className="Site__footer">
-        <small>Handcoded with love by Sergio Forés</small>
+        <small><IconLogo/> Handcoded with love by Sergio Forés</small>
+        <IconCC/>
       </footer>
     )
   }

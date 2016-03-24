@@ -1,37 +1,39 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
 
+const ACTIVE = { color: '#999' };
+
 export default class MainNav extends Component {
   render () {
     return (
       <ul className="Nav-main">
         <li className="Nav-main__item">
-          <Link to="/about">
+          <Link to="/about" activeStyle={ACTIVE}>
             About
           </Link>
         </li>
         <li className="Nav-main__item">
-          <Link to="/works">
+          <Link to="/works" activeStyle={ACTIVE}>
             Works
           </Link>
         </li>
         <li className="Nav-main__item">
-          <Link to="/page">
+          <Link to="/page" activeStyle={ACTIVE}>
             Pages
           </Link>
         </li>
         <li className="Nav-main__item">
-          <Link to="/blog">
+          <Link to="/blog" activeStyle={ACTIVE}>
             Blog
           </Link>
         </li>
         <li className="Nav-main__item">
-          <Link to="/skills">
+          <Link to="/skills" activeStyle={ACTIVE}>
             Skills
           </Link>
         </li>
         <li className="Nav-main__item">
-          <Link to="/photos">
+          <Link to="/photos" activeStyle={ACTIVE}>
             Photos
           </Link>
         </li>

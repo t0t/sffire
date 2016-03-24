@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import AboutEntry from './AboutEntry';
-
 import Rebase from 're-base'
 var base = Rebase.createClass('https://sergiofores.firebaseio.com/');
+import AboutEntry from './AboutEntry';
+import {IconEmail} from './Icons';
+
 
 export default class About extends Component {
   constructor(props) {
@@ -39,7 +40,7 @@ export default class About extends Component {
       <section>
         <h2>{this.state.page.title}</h2>
         <p>{this.state.page.desc}</p>
-        <a href="{this.state.page.email}">{this.state.page.email}</a>
+        <a href="{this.state.page.email}"><IconEmail/> {this.state.page.email}</a>
       </section>
     )
   }
