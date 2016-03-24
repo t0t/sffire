@@ -1,8 +1,9 @@
-import React, { Component } from 'react';
-import PageEntry from './PageEntry';
+import React, { Component } from 'react'
+import PageEntry from './PageEntry'
+import Social from './Social'
 
 import Rebase from 're-base'
-var base = Rebase.createClass('https://sergiofores.firebaseio.com/');
+var base = Rebase.createClass('https://sergiofores.firebaseio.com/')
 
 export default class Page extends Component {
   constructor(props) {

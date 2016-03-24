@@ -19,7 +19,7 @@ export default class MainNav extends Component {
         </li>
         <li className="Nav-main__item">
           <Link to="/page" activeStyle={ACTIVE}>
-            Pages
+            Page
           </Link>
         </li>
         <li className="Nav-main__item">
@@ -28,8 +28,8 @@ export default class MainNav extends Component {
           </Link>
         </li>
         <li className="Nav-main__item">
-          <Link to="/skills" activeStyle={ACTIVE}>
-            Skills
+          <Link to="/list" activeStyle={ACTIVE}>
+            List
           </Link>
         </li>
         <li className="Nav-main__item">

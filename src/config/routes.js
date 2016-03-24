@@ -10,7 +10,8 @@ import Page from '../components/Page'
 import Works from '../components/Works'
 import Blog from '../components/Blog'
 import Photos from '../components/Photos'
-import Skills from '../components/Skills'
+import List from '../components/List'
+
 // <Router history={browserHistory}>
 export default (
   <Route path="/" component={App}>
@@ -19,7 +20,7 @@ export default (
     <Route path="works" component={Works} />
     <Route path="blog" component={Blog} />
     <Route path="photos" component={Photos} />
-    <Route path="skills" component={Skills} />
+    <Route path="list" component={List} />
     <IndexRoute component={Home} />
   </Route>
 )

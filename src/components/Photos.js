@@ -25,13 +25,14 @@ export default class Photos extends Component {
   }
 
   render() {
-    var photosArray = this.state.photos.map(function(data){
+    var photosArray = this.state.photos.map( function (data) {
       return <Photo {...data} />
     })
     console.log(photosArray);
+    console.log(this.props.children);
+    console.log('slider');
     return (
       <section>
-        <h2>Photo Gallery</h2>
         {photosArray}
       </section>
     );

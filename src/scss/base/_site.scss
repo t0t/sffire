@@ -1,17 +1,24 @@
 .Site {
   margin: $base_spacing;
-  // min-height: 100vh;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: space-between;
+
   &__header {
     line-height: 1;
   }
   &__footer {
+    background-color: $color-black;
+    color: $color-base;
+    padding: $base_spacing;
+    font-size: 80%;
     line-height: 1;
     align-self: center;
     align-content: flex-end;
     margin-top: $base_spacing;
     margin-bottom: $base_spacing;
+    a {
+      color: $color-base;
+      &:hover {
+        color: $color_alt;
+      }
+    }
   }
 }

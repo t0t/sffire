@@ -3,17 +3,15 @@ import React, { Component } from 'react';
 export default class Work extends Component {
   render() {
     return (
-      <div>
-        <h4>{this.props.title}</h4>
-        <figure>
+      <article className="Works__item">
+        <h4 className="Works__item__title">{this.props.title}</h4>
+        <figure className="Works__figure">
           <img src={this.props.image} />
-          <figcaption>
-            <a href={this.props.url} target="_blank">
-              {this.props.url}
-            </a>
+          <figcaption className="Works__figure__caption">
+            {this.props.desc}
           </figcaption>
         </figure>
-      </div>
+      </article>
     );
   }
 }
