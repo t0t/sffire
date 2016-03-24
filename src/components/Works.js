@@ -24,9 +24,6 @@ class Works extends React.Component {
   }
 
   render() {
-    console.log(this.state);
-    console.log(this.state.works);
-    console.log(this.props.children);
     let worksList = this.state.works.map(function(data){
       return <Work {...data} />
     })

@@ -1,14 +1,13 @@
 ## SFFIRE
-Single Page Webapp basada en ES6 y React que ataca una base de datos Firebase (BaaS).
+Single Page App basada en ES6 y React que ataca una base de datos Firebase (BaaS).
 
 <!-- www.christianalfoni.com/articles/2015_04_19_The-ultimate-webpack-setup -->
 
 :scream:
-- [DEMO hosted in Firebase](https://sergiofores.firebaseapp.com)
-- [DEMO hosted in gh-pages](http://t0t.github.io/sffire)
+- [DEMO](http://t0t.github.io/sffire)
 
 ## Divide y vencerás
-- Firebase BaaS (Backend as a service)
+- Firebase BaaS (Backend as a Service)
     - Datos en tiempo real por Websockets
     - Te olvidas del Backend (el lado oscuro)
     - Gratis hasta 100 usuarios simultaneos
@@ -21,12 +20,9 @@ Single Page Webapp basada en ES6 y React que ataca una base de datos Firebase (B
 
 ## Conceptos
 - Arquitectura MVC (Model View Controller)
-- Estudio de ideas Domain-driven design
-- Remote data and Authentication with Firebase.
 - Isomorphic rendering of Firebase data.
 - Convenciones:
-  - camelCase
-  - BEM-style CSS components
+  - camelCase, BEM-style y CSS components
 
 ### Entorno local
 - Webpack (bundle, uglify, livereloading, etc)
@@ -43,3 +39,12 @@ Single Page Webapp basada en ES6 y React que ataca una base de datos Firebase (B
 * `~ npm run fenix` Limpia la carpeta `node_modules` y realiza una instalación limpia de todas las dependencias npm.
 * `~ npm run deploy` Publica en gh-pages
 * `~ firebase deploy` Publica en Firebase con las firebase tools
+
+### ToDo
+
+- [ ] Limpiar hash: /dist/#/photos?k=6vcle2
+- [ ] Embeber html5 api video/audio
+- [ ] Terminar la home /
+- [x] Implementar Iconos svg
+- [ ] Menu active class item
+- [ ] Create an SVG Icon System with React
