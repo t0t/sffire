@@ -1,13 +1,18 @@
-import React, { Component } from 'react';
-import Photo from './Photo';
-import Rebase from 're-base';
+import React, { Component } from 'react'
+import Photo from './Photo'
+import Rebase from 're-base'
+import Slider from './Slider'
+
 var base = Rebase.createClass('https://sergiofores.firebaseio.com/');
+
 console.log(base);
+
 export default class Photos extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      photos: []
+      slides: [],
+      loading: true
     };
     // this.url = base.photos;
   }
@@ -15,7 +20,7 @@ export default class Photos extends Component {
   componentDidMount(){
     this.photosRef = base.bindToState('photos', {
       context: this,
-      state: 'photos',
+      state: 'slides',
       asArray: true
     });
   }
@@ -25,15 +30,13 @@ export default class Photos extends Component {
   }
 
   render() {
-    var photosArray = this.state.photos.map( function (data) {
+    var slides = this.state.slides.map(function(data){
       return <Photo {...data} />
     })
-    console.log(photosArray);
-    console.log(this.props.children);
-    console.log('slider');
+
     return (
       <section>
-        {photosArray}
+        {slides}
       </section>
     );
   }

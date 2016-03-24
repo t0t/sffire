@@ -1,5 +1,8 @@
-.red {
-  color: red;
+figure.active {
+  opacity: .5;
+  width: 50%;
+  transition-duration: .3s;
+  transition-property: all;
 }
 .svg {
   stroke: $color_black;
