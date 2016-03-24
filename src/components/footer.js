@@ -5,8 +5,7 @@ export default class Footer extends Component {
   render() {
     return (
       <footer className="Site__footer">
-        <small><IconLogo/> Handcoded with love by Sergio Forés</small>
-        <IconCC/>
+        <small><IconLogo/> Handcoded with love by Sergio Forés <IconCC/></small>
       </footer>
     )
   }
