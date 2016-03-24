@@ -28,7 +28,7 @@ export class IconEmail extends Component {
 export class IconLogo extends Component {
  render() {
   return (
-    <svg className="icon-logo" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 42 42" aria-labelledby="title">
+    <svg className="icon-logo" xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 40 40" aria-labelledby="title">
       <path d="M6.43815718,3.4 L9.65723577,3.4 L9.65723577,6.8 L6.43815718,6.8 L6.43815718,3.4 L6.43815718,3.4 Z M3.21907859,13.6 L3.21907859,10.2 L6.41646612,10.2 L6.41646612,6.8 L3.21907859,6.8 L3.21907859,-8.32667268e-16 L-4.41441524e-16,-8.32667268e-16 L-4.41441524e-16,17 L9.65723577,17 L9.65723577,13.6 L3.21907859,13.6 L3.21907859,13.6 Z"></path>
     </svg>
   )
