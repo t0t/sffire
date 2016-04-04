@@ -28,7 +28,7 @@ export class IconEmail extends Component {
 export class IconLogo extends Component {
  render() {
   return (
-    <svg className="icon-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 99 99" aria-labelledby="title">
+    <svg className="icon-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 110" aria-labelledby="title">
       <title>Logo icon</title>
       <ellipse vector-effect="non-scaling-stroke" stroke-linejoin="bevel" cx="50" cy="50" rx="50" ry="50"/>
     <ellipse vector-effect="non-scaling-stroke" strokeLinecap="round" cx="49.978" cy="49.659" rx="49.978" ry="33.659"/>

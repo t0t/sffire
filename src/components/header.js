@@ -37,9 +37,8 @@ export default class Header extends Component {
     this.getPage();
     return (
       <header className="Site__header">
-        <Link to="/">
-          <h1><IconLogo /> {this.state.brand.name}</h1>
-        </Link>
+        <Link to="/"><IconLogo /></Link>
+        <h1>{this.state.brand.name}</h1>
         <h5>{this.state.brand.title}</h5>
       </header>
     )
