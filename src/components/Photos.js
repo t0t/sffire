@@ -2,41 +2,54 @@ import React, { Component } from 'react'
 import Photo from './Photo'
 import Rebase from 're-base'
 import Slider from './Slider'
+// import Controls from './PhotoControls'
 
 var base = Rebase.createClass('https://sergiofores.firebaseio.com/');
 
-console.log(base);
-
-export default class Photos extends Component {
+export default class Photos extends React.Component {
   constructor(props) {
     super(props);
+    // this.cambiaNombre = this.cambiaNombre.bind(this);
     this.state = {
       slides: [],
-      loading: true
+      click: 0,
+      slide: 0
     };
-    // this.url = base.photos;
   }
 
   componentDidMount(){
-    this.photosRef = base.bindToState('photos', {
+    this.ref = base.bindToState('photos', {
       context: this,
       state: 'slides',
       asArray: true
     });
   }
-
   componentWillUnmount(){
-    base.removeBinding(this.photosRef);
+    base.removeBinding(this.ref);
   }
-
+  slideIndex() {
+    this.setState({
+      slide: this.state.slide + 1
+    })
+  }
+  cambiaNombre() {
+    this.setState({
+      click: this.state.click + 1
+    })
+  }
   render() {
-    var slides = this.state.slides.map(function(data){
+    let slides = this.state.slides.map( (data) => {
       return <Photo {...data} />
     })
-
+    let slide = slides[this.state.slide];
+    // console.log( 'slide: ', this.state.slides[this.state.slide]);
     return (
       <section>
-        {slides}
+        {slide}
+        <button
+        onClick={this.cambiaNombre.bind(this)}>
+        {this.state.click}
+        </button>
       </section>
     );
   }

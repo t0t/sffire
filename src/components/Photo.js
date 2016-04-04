@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// import PhotoControls from './PhotoControls'
 
 export default class Photo extends Component {
   constructor(props) {
@@ -7,21 +8,25 @@ export default class Photo extends Component {
       isActive: false
     }
   }
-  handleClick (e) {
-    e.preventDefault
+  handleClick () {
+    // e.preventDefault
     let active = !this.state.isActive
     this.setState({ isActive: active })
-    console.log(this.state.isActive)
   }
   render() {
-    let clase = this.state.isActive && 'active'
+    let addClass = this.state.isActive && 'active'
     return (
-      <figure className={clase} onClick={this.handleClick.bind(this)}>
-        <img src={this.props.url} />
+      <figure>
+        <img
+          src={ this.props.url }
+          onClick={ this.handleClick.bind(this) }
+          className={ addClass }
+        />
         <figcaption>
           {this.props.title}
         </figcaption>
       </figure>
-    );
+
+    )
   }
 }
