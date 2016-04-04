@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Rebase from 're-base'
 var base = Rebase.createClass('https://sergiofores.firebaseio.com/');
 
-import { IconUmbrella } from './Icons'
+import { IconLogo } from './Icons'
 import { Link } from 'react-router'
 
 export default class Header extends Component {
@@ -38,7 +38,7 @@ export default class Header extends Component {
     return (
       <header className="Site__header">
         <Link to="/">
-          <h1><IconUmbrella /> {this.state.brand.name}</h1>
+          <h1><IconLogo /> {this.state.brand.name}</h1>
         </Link>
         <h5>{this.state.brand.title}</h5>
       </header>
