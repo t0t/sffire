@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { IconLogo, IconCC } from './Icons';
-import Social from './Social'
+import Social from './social/Social'
 
 export default class Footer extends Component {
   render() {

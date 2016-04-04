@@ -1,10 +1,11 @@
-import React, { Component } from 'react';
-import HomeContent from './HomeContent';
-
+import React, { Component } from 'react'
 import Rebase from 're-base'
+
+import HomeContent from './HomeContent'
+
 var base = Rebase.createClass('https://sergiofores.firebaseio.com/');
 
-export default class Page extends Component {
+export default class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {

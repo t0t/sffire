@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
-// import PhotoControls from './PhotoControls'
 
-export default class Photo extends Component {
+export default class Slide extends Component {
   constructor(props) {
     super(props);
     this.state = {
       isActive: false
     }
   }
-  handleClick () {
-    // e.preventDefault
+  handleClick (e) {
+    e.preventDefault
     let active = !this.state.isActive
     this.setState({ isActive: active })
   }

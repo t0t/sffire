@@ -6,34 +6,16 @@ export default class MainNav extends Component {
     return (
       <ul className="Nav-main">
         <li className="Nav-main__item">
-          <Link to="/about" activeClassName="active">
-            About
-          </Link>
+          <Link to="/about" activeClassName="active"> About </Link>
         </li>
         <li className="Nav-main__item">
-          <Link to="/works" activeClassName="active">
-            Works
-          </Link>
+          <Link to="/works" activeClassName="active"> Works </Link>
         </li>
         <li className="Nav-main__item">
-          <Link to="/page" activeClassName="active">
-            Page
-          </Link>
+          <Link to="/blog" activeClassName="active"> Blog </Link>
         </li>
         <li className="Nav-main__item">
-          <Link to="/blog" activeClassName="active">
-            Blog
-          </Link>
-        </li>
-        <li className="Nav-main__item">
-          <Link to="/list" activeClassName="active">
-            List
-          </Link>
-        </li>
-        <li className="Nav-main__item">
-          <Link to="/photos" activeClassName="active">
-            Photos
-          </Link>
+          <Link to="/photos" activeClassName="active"> Slider </Link>
         </li>
       </ul>
     )

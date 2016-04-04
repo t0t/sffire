@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class BlogEntry extends Component {
+export default class ServicesEntry extends Component {
   render() {
     return (
       <div>

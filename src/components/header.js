@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Rebase from 're-base'
 var base = Rebase.createClass('https://sergiofores.firebaseio.com/');
-// import { browserHistory, Router, Route, Link } from 'react-router'
 
 import { IconUmbrella } from './Icons'
 import { Link } from 'react-router'

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {IconArrowRight} from './Icons'
+import {IconArrowRight} from '../Icons'
 
 export default class SocialLinks extends Component {
   render() {

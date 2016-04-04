@@ -9,10 +9,10 @@ export default class App extends Component {
   render() {
     return (
       <main className="Site">
-        <Header/>
-        <MainNav/>
+        <Header />
+        <MainNav />
           {this.props.children}
-        <Footer/>
+        <Footer />
       </main>
     )
   }

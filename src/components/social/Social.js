@@ -24,20 +24,7 @@ export default class Social extends Component {
     base.removeBinding(this.pageRef);
   }
 
-  // getData(){
-  //   base.fetch('social', {
-  //     context: this,
-  //     asArray: false,
-  //     then(data){ this.state.data = data; }
-  //   });
-  // }
-
   render() {
-    // this.getData();
-
-    console.log(this.props);
-    console.log(this.state.data);
-
     var socialLinks = this.state.data.map(function(data){
       return <SocialLinks {...data} />
     });

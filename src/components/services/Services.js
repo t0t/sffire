@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import PageEntry from './PageEntry'
-import Social from './Social'
-
 import Rebase from 're-base'
-var base = Rebase.createClass('https://sergiofores.firebaseio.com/')
 
-export default class Page extends Component {
+import ServicesEntry from './ServicesEntry'
+
+var base = Rebase.createClass('https://sergiofores.firebaseio.com/');
+
+export default class Services extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -13,7 +13,7 @@ export default class Page extends Component {
     };
   }
 
-  componentDidMount(){
+  componentDidMount() {
     this.blogRef = base.bindToState('pages', {
       context: this,
       state: 'pages',
@@ -21,19 +21,18 @@ export default class Page extends Component {
     });
   }
 
-  componentWillUnmount(){
+  componentWillUnmount() {
     base.removeBinding(this.blogRef);
   }
 
   render() {
     console.log(this.state.pages);
-    var pages = this.state.pages.map(function(data){
-        return <PageEntry {...data} />
+    var pages = this.state.pages.map( function(data) {
+        return <ServicesEntry {...data} />
     })
 
     return (
       <section>
-        <h2>Page</h2>
         {pages}
       </section>
     )
