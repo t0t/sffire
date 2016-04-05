@@ -5,33 +5,52 @@ import Work from './Work'
 const base = Rebase.createClass('https://sergiofores.firebaseio.com/')
 
 class Works extends React.Component {
+
   constructor(props){
     super(props);
     this.state = {
-      works: []
+      works: null,
+      loading: true
     };
   }
+
   componentDidMount(){
-    this.photosRef = base.bindToState('works', {
+    this.ref = base.fetch('works', {
       context: this,
-      state: 'works',
-      asArray: true
+      asArray: true,
+      then(data) {
+        console.log(data)
+        this.setState({
+          loading: false,
+          works: data
+        })
+      }
     });
   }
 
-  componentWillUnmount(){
-    base.removeBinding(this.photosRef);
-  }
+  // componentWillUnmount(){
+  //   base.removeBinding(this.ref);
+  // }
 
   render() {
-    let worksList = this.state.works.map(function(data){
-      return <Work {...data} />
-    })
-    return (
-      <section className="Works">
+
+
+    if (this.state.loading === true) {
+      console.log('cargando')
+      return (
+        <div className="Loading"></div>
+      )
+    } else {
+      console.log('cargado')
+      let worksList = this.state.works.map(function(datos){
+        return <Work {...datos} />
+      })
+      return (
+        <section className="Works">
         {worksList}
-      </section>
-    )
+        </section>
+      )
+    }
   }
 }
 
