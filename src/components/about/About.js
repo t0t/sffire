@@ -40,8 +40,7 @@ export default class About extends Component {
     this.getAboutPage();
     return (
       <section>
-        <h2>{this.state.page.title}</h2>
-        <p>{this.state.page.desc}</p>
+        <h1>{this.state.page.desc}</h1>
         <a href="{this.state.page.email}"><IconEmail/> {this.state.page.email}</a>
         <Services />
         <Skills />

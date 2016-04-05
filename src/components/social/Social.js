@@ -29,9 +29,18 @@ export default class Social extends Component {
       return <SocialLinks {...data} />
     });
     return (
-      <ul className="Social">
-        {socialLinks}
-      </ul>
+      <div>
+        <h3>¿Hablamos?</h3>
+        <form action="https://formspree.io/sergiofores@gmail.com"
+      method="POST">
+        <input type="text" name="name"/>
+        <input type="email" name="_replyto"/>
+        <input type="submit" value="Send"/>
+</form>
+        <ul className="Social">
+          {socialLinks}
+        </ul>
+      </div>
     )
   }
 }

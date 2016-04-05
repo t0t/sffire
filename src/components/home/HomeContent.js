@@ -4,7 +4,7 @@ export default class HomeContent extends Component {
   render() {
     return (
       <div>
-        <p>{this.props.p}</p>
+        <h1 className="Home__header">{this.props.p}</h1>
         <img src={this.props.img} />
       </div>
     );

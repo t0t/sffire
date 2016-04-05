@@ -6,6 +6,7 @@
 
   &__logo {
     margin-right: $base_spacing / 2;
+    height: 50px;
   }
   &__name {
     display: none;
@@ -14,17 +15,20 @@
     font-size: 65%;
     width: 50px;
     margin-top: 0;
+    margin-right: 0;
     line-height: 1.3;
     font-weight: normal;
     letter-spacing: 1px;
   }
   &__header {
+    display: flex;
     line-height: 1;
     height: 50px;
     flex: 0 100px;
   }
   &__footer {
-    color: $color-base;
+    width: 100%;
+    // color: $color-base;
     padding: $base_spacing;
     font-size: 80%;
     line-height: 1;
@@ -32,8 +36,9 @@
     align-content: flex-end;
     margin-top: $base_spacing;
     margin-bottom: $base_spacing;
+    border: 1px solid $color-black;
     a {
-      color: $color-base;
+      // color: $color-base;
       &:hover {
         color: $color_alt;
       }

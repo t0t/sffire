@@ -4,9 +4,11 @@
   // width: 49px;
 }
 .icon-logo-sf {
-  // stroke: $color-black;
-  fill: $color-base;
+  fill: $color-black;
   width: 30px;
+  .Site__footer & {
+    width: 10px;
+  }
 }
 .icon-email {
   fill: $color-base;
