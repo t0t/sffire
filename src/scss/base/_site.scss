@@ -8,9 +8,11 @@
     margin-right: $base_spacing / 2;
     height: 50px;
   }
+
   &__name {
     display: none;
   }
+
   &__description {
     font-size: 65%;
     width: 50px;
@@ -20,12 +22,14 @@
     font-weight: normal;
     letter-spacing: 1px;
   }
+
   &__header {
     display: flex;
     line-height: 1;
     height: 50px;
     flex: 0 100px;
   }
+
   &__footer {
     width: 100%;
     // color: $color-base;
@@ -35,12 +39,16 @@
     align-self: center;
     align-content: flex-end;
     margin-top: $base_spacing;
-    margin-bottom: $base_spacing;
+    // margin-bottom: 0;
     border: 1px solid $color-black;
+
+    h3 {
+      margin-top: 0
+    }
     a {
       // color: $color-base;
       &:hover {
-        color: $color_alt;
+        color: $color_black;
       }
     }
   }

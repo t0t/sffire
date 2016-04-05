@@ -1,5 +1,5 @@
 .Nav-main {
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
@@ -11,9 +11,41 @@
     margin-left: 5px;
     margin-right: 5px;
   }
+  &-wrap {
+    position: relative;
+    // background-color: yellow;
+  }
+  @media screen and (min-width: $bp3) {
+    display: flex;
+  }
 }
+
+.toggle-btn {
+  position: fixed;
+  right: $base_spacing;
+  background-color: $color_alt;
+  @media screen and (min-width: $bp3) {
+    display: none;
+  }
+}
+
 .active {
   opacity: .5;
-}
-.noclase {
+
+  &.toggle-btn {
+    transition-property: all;
+    transition-duration: .3s;
+    transform: rotate(45deg);
+
+    & + .Nav-main {
+      position: fixed;
+      top: $base_spacing * 2;
+      right: $base_spacing;
+      display: inherit;
+      // background-color: $color-white-alpha;
+      @media screen and (min-width: $bp3) {
+        position: inherit;
+      }
+    }
+  }
 }

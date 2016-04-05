@@ -47,28 +47,20 @@ body {
     font-size: 125%;
   }
 }
+
+a {
+  text-decoration: none;
+  color: $color-base;
+}
+
 section {
   margin-top: $base_spacing;
 }
+
 img {
   max-width: 100%;
 }
-a {
 
-  color: $color_black;
-  text-decoration: none;
-}
-ul li {
-  margin-bottom: $base_spacing / 2;
-}
-ul li a {
-  // font-weight: bold;
-  // border-bottom: 1px solid $color_alt;
-  &:hover {
-    // color: $color_alt;
-    border-bottom: none;
-  }
-}
 blockquote {
   color: $color_alt;
   border-left: 1px solid $color_alt;
@@ -106,246 +98,10 @@ iframe {
   background-color: $color_alt;
 }
 
-// Layout
-.siteHeader {
-  background-color: $color-alt;
-  // margin-bottom: $base_spacing / 2;
+button {
+  border: none;
 }
 
-.site--main {
-  max-width: 1280px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  color: $color_black;
-  p a {
-    font-weight: bold;
-    // display: inline-block;
-    border-bottom: 1px solid $color_alt;
-    // background-color: yellow;
-    &:hover {
-      color: $color_alt;
-      border-bottom: none;
-    }
-  }
-}
-// Footer List
-.footer__list {
-  padding: $base_spacing;
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  border: 1px solid $color_black;
-  &__item {
-    padding: 5px;
-    margin-bottom: 0;
-  }
-  &__title {
-    text-align: center;
-    flex: 100%;
-    font-weight: bold;
-  }
-}
-.siteFooter {
-  // background-color: $color_gray;
-  padding: $base_spacing/2;
-  a {
-    // color: lighten($color_black, 50);
-    border-bottom: none;
-    &:hover {
-      color: $color_black;
-    }
-  }
-}
-.siteCredits {
-  text-align: center;
-  &__author {}
-  &__year {}
-  &__cookies {}
-}
-.siteSection {}
-
-// Site Nav
-.site {
-  &Nav {
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 385px;
-    display: flex;
-    // flex-wrap: wrap;
-    // justify-content: flex-start;
-    // align-items: flex-start;
-    transition-property: transform;
-    transition-duration: .3s;
-    transition-timing-function: ease-in-out;
-    transform: translate(340px,-20px) rotate(-20deg);
-    // transform-origin: center;
-    z-index: 100;
-    .siteMenu {
-      opacity: 0;
-      position: absolute;
-    }
-    &.active {
-      transition-property: transform;
-      transition-duration: .3s;
-      transition-timing-function: ease-in-out;
-      transform: translate(210px,30px) rotate(-5deg); //200px
-      input {
-        background-color: $color_black;
-        color: $color_white;
-      }
-      .siteMenu {
-        opacity: 1;
-        // transition-property: opacity;
-        // transition-duration: 2s;
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        text-transform: uppercase;
-      }
-    }
-  }
-}
-
-// Buttons
-.btn {
-  a {
-    display: block;
-    padding: $base_spacing/2;
-  }
-  &Nav {
-    // background-color: $color_alt;
-    margin-bottom: 0;
-    a {
-      padding: $base_spacing/2;
-      color: $color_black;
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-  &Toggle {
-    padding: $base_spacing/4;
-    background-color: $color_alt;
-    text-transform: uppercase;
-    align-self: flex-start;
-    margin-top: $base_spacing;
-    &:hover {
-      background-color: $color_black;
-      color: $color_white;
-    }
-  }
-}
-
-// Components
-.site {
-  &Brand {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 145px;
-  }
-  &Title {
-    text-transform: uppercase;
-    font-size: 90%;
-    align-self: center;
-  }
-  &Logo {
-    width: 50px;
-    height: 50px;
-    position: fixed;
-    z-index: 100;
-    margin-top: $base_spacing / 2;
-    margin-left: $base_spacing;
-    fill: $color_alt;
-    stroke-width: 1;
-    stroke: $color_black;
-    stroke-linecap: round;
-    // stroke-dasharray: 0, 300;
-    stroke-dasharray: 0, 300;
-    animation-name: dibuja;
-    animation-duration: 7s;
-    animation-timing-function: ease-out;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards; //backwards
-  }
-}
-.agradecimientos {
-  line-height: 1.5;
-  // margin-bottom: $base_spacing;
-}
-.cover {
-  max-width: 1840px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: $base_spacing;
-  background-image: url('#{$path}image1.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  min-height: 585px;
-  &__title,
-  &__description {
-    color: $color_alt;
-    flex: 1 100%;
-    text-align: center;
-    padding: $base_spacing;
-    font-weight: inherit;
-    margin-bottom: 0;
-    letter-spacing: 3px;
-  }
-  &__title {
-    text-transform: uppercase;
-  }
-  @media screen and ( min-width: 1030px ) {}
-  @media screen and ( min-width: 1430px ) {}
-}
-// Listados
-.list {}
-.list--features {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  &__item {
-    flex: 1 300px;
-    padding: $base_spacing / 2;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  &__title {
-    flex: 1 100%;
-  }
-  svg {
-    width: 100px;
-    height: 100px;
-  }
-}
-// Post
-.post {
-  figure {
-    position: relative;
-  }
-  figcaption {
-    color: $color_alt;
-    position: absolute;
-    bottom: $base_spacing/2;
-    right: $base_spacing/2;
-  }
-  p,
-  audio,
-  h1 {
-    padding: 0 $base_spacing;
-  }
-}
-.post-title {
-  text-align: center;
-}
 // Agradecimientos (en el footer)
 .agradecimientos {
   padding: $base_spacing;

@@ -7,7 +7,9 @@ export default class Footer extends Component {
     return (
       <footer className="Site__footer">
         <Social/>
-        <small><IconLogoSF /> Handcoded with love by Sergio Forés <IconCC/></small>
+        <small>Handcoded with love by </small>
+        <small><IconLogoSF /> Sergio Forés </small>
+        <small><IconCC/></small>
       </footer>
     )
   }

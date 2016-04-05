@@ -31,12 +31,11 @@ export default class Social extends Component {
     return (
       <div>
         <h3>¿Hablamos?</h3>
-        <form action="https://formspree.io/sergiofores@gmail.com"
-      method="POST">
-        <input type="text" name="name"/>
-        <input type="email" name="_replyto"/>
-        <input type="submit" value="Send"/>
-</form>
+        <form action="https://formspree.io/sergiofores@gmail.com" method="POST">
+          <input type="text" name="name"/>
+          <input type="email" name="_replyto"/>
+          <input type="submit" value="Send"/>
+        </form>
         <ul className="Social">
           {socialLinks}
         </ul>
