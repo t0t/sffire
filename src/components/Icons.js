@@ -24,19 +24,30 @@ export class IconEmail extends Component {
  }
 }
 
-// Icon Logo
+// Icon Logo TOT
 export class IconLogo extends Component {
  render() {
   return (
     <svg className="icon-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 110" aria-labelledby="title">
       <title>Logo icon</title>
       <ellipse vector-effect="non-scaling-stroke" stroke-linejoin="bevel" cx="50" cy="50" rx="50" ry="50"/>
-    <ellipse vector-effect="non-scaling-stroke" strokeLinecap="round" cx="49.978" cy="49.659" rx="49.978" ry="33.659"/>
-    <path vector-effect="non-scaling-stroke" strokeLinecap="round" d="M49.96 0l47.514 34.52-18.15 55.858h-58.73L2.444 34.52z"/>
-    <path vector-effect="non-scaling-stroke" strokeLinecap="round" d="M49.96 0l43.266 24.98v49.96L49.96 99.92 6.692 74.94V24.98z"/>
-    <path vector-effect="non-scaling-stroke" strokeLinecap="round" d="M49.96 0l35.326 14.633L99.92 49.96 85.285 85.285 49.96 99.92 14.632 85.285 0 49.96l14.633-35.327z"/>
-    <path vector-effect="non-scaling-stroke" strokeLinecap="round" stroke-linejoin="round" d="M14.59 14.59H85V85H14.59z"/>
-    <path vector-effect="non-scaling-stroke" strokeLinecap="round" stroke-linejoin="round" d="M49.99 0l39.988 79.978H10z"/>
+      <ellipse vector-effect="non-scaling-stroke" strokeLinecap="round" cx="49.978" cy="49.659" rx="49.978" ry="33.659"/>
+      <path vector-effect="non-scaling-stroke" strokeLinecap="round" d="M49.96 0l47.514 34.52-18.15 55.858h-58.73L2.444 34.52z"/>
+      <path vector-effect="non-scaling-stroke" strokeLinecap="round" d="M49.96 0l43.266 24.98v49.96L49.96 99.92 6.692 74.94V24.98z"/>
+      <path vector-effect="non-scaling-stroke" strokeLinecap="round" d="M49.96 0l35.326 14.633L99.92 49.96 85.285 85.285 49.96 99.92 14.632 85.285 0 49.96l14.633-35.327z"/>
+      <path vector-effect="non-scaling-stroke" strokeLinecap="round" stroke-linejoin="round" d="M14.59 14.59H85V85H14.59z"/>
+      <path vector-effect="non-scaling-stroke" strokeLinecap="round" stroke-linejoin="round" d="M49.99 0l39.988 79.978H10z"/>
+    </svg>
+  )
+ }
+}
+
+// Icon Logo SF
+export class IconLogoSF extends Component {
+ render() {
+  return (
+    <svg className="icon-logo-sf" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 17" aria-labelledby="title">
+      <path d="M6.43815718,3.4 L9.65723577,3.4 L9.65723577,6.8 L6.43815718,6.8 L6.43815718,3.4 L6.43815718,3.4 Z M3.21907859,13.6 L3.21907859,10.2 L6.41646612,10.2 L6.41646612,6.8 L3.21907859,6.8 L3.21907859,-8.32667268e-16 L-4.41441524e-16,-8.32667268e-16 L-4.41441524e-16,17 L9.65723577,17 L9.65723577,13.6 L3.21907859,13.6 L3.21907859,13.6 Z"></path>
     </svg>
   )
  }

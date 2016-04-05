@@ -6,10 +6,10 @@ export default class MainNav extends Component {
     return (
       <ul className="Nav-main">
         <li className="Nav-main__item">
-          <Link to="/about" activeClassName="active"> About </Link>
+          <Link to="/about" activeClassName="active"> Servicios </Link>
         </li>
         <li className="Nav-main__item">
-          <Link to="/works" activeClassName="active"> Works </Link>
+          <Link to="/works" activeClassName="active"> Portafolio </Link>
         </li>
         <li className="Nav-main__item">
           <Link to="/blog" activeClassName="active"> Blog </Link>

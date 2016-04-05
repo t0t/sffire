@@ -29,7 +29,6 @@ class Works extends React.Component {
     })
     return (
       <section className="Works">
-        <h2>Works</h2>
         {worksList}
       </section>
     )

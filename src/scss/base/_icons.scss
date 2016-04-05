@@ -1,7 +1,12 @@
 .icon-logo {
   stroke: $color-black;
   fill: none;
-  width: 70px;
+  // width: 49px;
+}
+.icon-logo-sf {
+  // stroke: $color-black;
+  fill: $color-base;
+  width: 30px;
 }
 .icon-email {
   fill: $color-base;
