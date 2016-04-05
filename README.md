@@ -1,8 +1,6 @@
 ## SFFIRE
 Single Page App basada en ES6 y React que ataca una base de datos Firebase (BaaS).
 
-<!-- www.christianalfoni.com/articles/2015_04_19_The-ultimate-webpack-setup -->
-
 :scream:
 - [DEMO](http://t0t.github.io/sffire)
 
@@ -11,18 +9,18 @@ Single Page App basada en ES6 y React que ataca una base de datos Firebase (BaaS
     - Datos en tiempo real por Websockets
     - Te olvidas del Backend (el lado oscuro)
     - Gratis hasta 100 usuarios simultaneos
-    - Usa JSON !
+    - Basado en JSON !
     - AUTH y usuarios of course...
     - 1Gb hosting gratis
 - FrontEnd
   - Javascript ES6
-  - React, flux...
+  - React
 
 ## Conceptos
-- Arquitectura MVC (Model View Controller)
+- Arquitectura centrada en las vistas con React
 - Isomorphic rendering of Firebase data.
 - Convenciones:
-  - camelCase, BEM-style y CSS components
+  - camelCase, BEM-style y Components
 
 ### Entorno local
 - Webpack (bundle, uglify, livereloading, etc)
@@ -44,7 +42,7 @@ Single Page App basada en ES6 y React que ataca una base de datos Firebase (BaaS
 
 - [ ] Limpiar hash: /dist/#/photos?k=6vcle2
 - [ ] Embeber html5 api video/audio
-- [ ] Terminar la home /
+- [x] Terminar la ruta home /
 - [x] Implementar Iconos svg
-- [ ] Menu active class item
-- [ ] Create an SVG Icon System with React
+- [x] Menu active class item
+- [x] Create an SVG Icon System with React
