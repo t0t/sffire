@@ -1,8 +1,7 @@
 ## SFFIRE
 Single Page App basada en ES6 y React que ataca una base de datos Firebase (BaaS).
 
-:scream:
-- [DEMO](http://t0t.github.io/sffire)
+:scream: [DEMO](http://t0t.github.io/sffire)
 
 ## Divide y vencerás
 - Firebase BaaS (Backend as a Service)
@@ -31,7 +30,7 @@ Single Page App basada en ES6 y React que ataca una base de datos Firebase (BaaS
 
 ### El package.json
 
-* `~ npm start`: Arranca webpack en modo desarrollo. Para ver tu página, accede a [http://localhost:3000/dist/main](http://localhost:3000/dist/main)
+* `~ npm start`: Arranca webpack en modo desarrollo en [http://localhost:3000/dist/main](http://localhost:3000/dist/)
 * `~ npm run build` Compila el código para distribuirlo en producción
 * `~ npm run clean` Limpia la carpeta `dist`, en la que se generan los archivos en modo producción.
 * `~ npm run fenix` Limpia la carpeta `node_modules` y realiza una instalación limpia de todas las dependencias npm.
