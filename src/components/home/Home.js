@@ -29,7 +29,7 @@ export default class Home extends Component {
 
     return (
       <section className="Home">
-        <div className="Site__section-header Site__section-header--home">
+        <div className="Site__section__header Site__section__header--home">
           <h1>{home.title}</h1>
         </div>
         {(home.img) ? <img src={home.img}/> : null}

@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export default class Work extends Component {
   render() {
     return (
-      <article className="Works__item">
+      <article className="Works__item Site__section__article">
         { (this.props.header) ?
           <h4 className="Works__item__title">
             {this.props.title}

@@ -42,8 +42,8 @@ export default class Works extends React.Component {
         return <Work {...datos} />
       })
       return (
-        <section className="Works">
-          <div className="Site__section-header">
+        <section className="Site__section Site__section--works">
+          <div className="Site__section__header">
             <h1>{header}</h1>
           </div>
           {worksList}

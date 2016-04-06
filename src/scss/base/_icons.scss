@@ -6,22 +6,25 @@
 .icon-loader {
   stroke: $color-base;
   fill: none;
-  // width: 49px;
+  width: 100%;
+  height: 100px;
   animation-name: loader;
   animation-duration: .2s;
   animation-iteration-count: infinite;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  display: block;
+  z-index: 10;
 }
 .icon-toggle {
   stroke: $color-black;
   fill: none;
-  // width: 49px;
+  width: 49px;
+  height: 49px;
 }
 .icon-logo-sf {
   fill: $color-black;
-  width: 30px;
-  .Site__footer & {
-    width: 10px;
-  }
 }
 .icon-email {
   fill: $color-base;
@@ -29,7 +32,7 @@
   height: 20px;
 }
 .icon-cc {
-  fill: $color-base;
+  fill: $color-alt;
   width: 50px;
   height: 12px;
 }

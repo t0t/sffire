@@ -45,8 +45,8 @@ export default class Blog extends Component {
           return <BlogEntry {...data} />
       })
       return (
-        <section>
-          <div className="Site__section-header">
+        <section className="Site__section Site__section--blog">
+          <div className="Site__section__header">
             <h1>{header}</h1>
           </div>
           {blogPosts}

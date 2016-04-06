@@ -5,6 +5,7 @@
   justify-content: center;
   padding-left: 0;
   list-style: none;
+  width: 100%;
   margin: 0;
   &__item {
     margin-bottom: 0;
@@ -13,7 +14,11 @@
   }
   &-wrap {
     position: relative;
-    margin-top: $base_spacing;
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    // margin-top: $base_spacing;
+    background-color: $color-white-alpha;
     // margin-left: $base_spacing;
   }
   @media screen and (min-width: $bp3) {
@@ -23,7 +28,8 @@
 
 .toggle-btn {
   position: fixed;
-  right: $base_spacing;
+  top: 0;
+  right: 0;
   background-color: $color_alt;
   @media screen and (min-width: $bp3) {
     display: none;
@@ -31,19 +37,22 @@
 }
 
 .active {
-  opacity: .5;
+  animation-name: active;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
 
   &.toggle-btn {
-    transition-property: all;
+    transition-property: opacity;
     transition-duration: .3s;
     transform: rotate(45deg);
 
     & + .Nav-main {
       position: fixed;
-      top: $base_spacing * 2;
-      right: $base_spacing;
+      top: $base_spacing * 3;
+      right: 0;
+      left: 0;
       display: inherit;
-      // background-color: $color-white-alpha;
+      background-color: $color-white;
       @media screen and (min-width: $bp3) {
         position: inherit;
       }

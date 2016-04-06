@@ -1,3 +1,4 @@
+
 .Site {
   display: flex;
   flex-wrap: wrap;
@@ -5,12 +6,36 @@
   max-width: $bp1;
   margin-left: auto;
   margin-right: auto;
-
-  &__section-header { //Encabezados de secciones
+  &__section {
+    display:flex;
+    flex-wrap: wrap;
+    &__article > h2,
+    &__article > h4,
+    &__article > small,
+    &__article > figure figcaption,
+    &__article > p, {
+      padding-left: $base_spacing;
+      padding-right: $base_spacing;
+    }
+    &__article small {
+      display: block; // ??
+    }
+    &--works {
+      // background-color: red;
+    }
+    &--blog {
+      // background-color: blue;
+    }
+    &--services {
+      // background-color: yellow;
+    }
+  }
+  &__section__header { //Encabezados de secciones
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 100%;
+    flex: 1;
+    // min-height: 200px;
     background-color: $color-black;
     h1 {
       text-align: center;
@@ -19,7 +44,7 @@
       margin-bottom: 0;
     }
   }
-  &__section-header--home {
+  &__section__header--home {
     background-color: $color-base;
     h1 {
       color: $color-white;
@@ -27,8 +52,11 @@
   }
 
   &__logo {
-    margin-right: $base_spacing / 2;
-    height: 50px;
+    display: block;
+    padding: $base_spacing;
+    width: 70px;
+    height: 70px;
+    background-color: $color-alt;
   }
 
   &__name {
@@ -36,6 +64,7 @@
   }
 
   &__description {
+    display: none;
     font-size: 65%;
     width: 50px;
     margin-top: 0;
@@ -46,12 +75,13 @@
   }
 
   &__header {
-    display: flex;
-    line-height: 1;
-    height: 50px;
-    flex: 0 100px;
-    margin-top: $base_spacing;
-    margin-left: $base_spacing;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // line-height: 1;
+    // width: 100%;
+    // height: 50px;
+    // flex: 0 100px;
   }
 
   &__footer {

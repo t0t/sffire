@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 export class IconLoader extends Component {
  render() {
   return (
-    <svg className="icon-loader" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" aria-labelledby="title">
+    <svg className="icon-loader Loading" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" aria-labelledby="title">
       <title id="title">Umbrella Icon</title>
       <path d="M27 14h5c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2v0zM27 14c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2v0 14c0 1.112-0.895 2-2 2-1.112 0-2-0.896-2-2.001v-1.494c0-0.291 0.224-0.505 0.5-0.505 0.268 0 0.5 0.226 0.5 0.505v1.505c0 0.547 0.444 0.991 1 0.991 0.552 0 1-0.451 1-0.991v-14.009c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2c0-5.415 6.671-9.825 15-9.995v-1.506c0-0.283 0.224-0.499 0.5-0.499 0.268 0 0.5 0.224 0.5 0.499v1.506c8.329 0.17 15 4.58 15 9.995h-5z"/>
     </svg>
@@ -16,7 +16,7 @@ export class IconLoader extends Component {
 export class IconToggle extends Component {
  render() {
   return (
-    <svg className="icon-toggle" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" aria-labelledby="title">
+    <svg className="icon-toggle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-labelledby="title">
       <title id="title">Umbrella Icon</title>
       <path d="M27 14h5c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2v0zM27 14c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2v0 14c0 1.112-0.895 2-2 2-1.112 0-2-0.896-2-2.001v-1.494c0-0.291 0.224-0.505 0.5-0.505 0.268 0 0.5 0.226 0.5 0.505v1.505c0 0.547 0.444 0.991 1 0.991 0.552 0 1-0.451 1-0.991v-14.009c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2c0-5.415 6.671-9.825 15-9.995v-1.506c0-0.283 0.224-0.499 0.5-0.499 0.268 0 0.5 0.224 0.5 0.499v1.506c8.329 0.17 15 4.58 15 9.995h-5z"/>
     </svg>
@@ -58,8 +58,8 @@ export class IconLogo extends Component {
 export class IconLogoSF extends Component {
  render() {
   return (
-    <svg className="icon-logo-sf" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 17" aria-labelledby="title">
-      <path d="M6.43815718,3.4 L9.65723577,3.4 L9.65723577,6.8 L6.43815718,6.8 L6.43815718,3.4 L6.43815718,3.4 Z M3.21907859,13.6 L3.21907859,10.2 L6.41646612,10.2 L6.41646612,6.8 L3.21907859,6.8 L3.21907859,-8.32667268e-16 L-4.41441524e-16,-8.32667268e-16 L-4.41441524e-16,17 L9.65723577,17 L9.65723577,13.6 L3.21907859,13.6 L3.21907859,13.6 Z"></path>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
+    <path d="M6.438 3.4h3.22v3.4h-3.22V3.4zm-3.22 10.2v-3.4h3.198V6.8H3.22V0H0v17h9.657v-3.4H3.22z"/>
     </svg>
   )
  }
