@@ -20,7 +20,7 @@ export default class MainNav extends Component {
         </button>
         <ul className="Nav-main">
           <li className="Nav-main__item">
-            <Link to="/about" activeClassName="active"> Servicios </Link>
+            <Link to="/services" activeClassName="active"> Servicios </Link>
           </li>
           <li className="Nav-main__item">
             <Link to="/works" activeClassName="active"> Portafolio </Link>

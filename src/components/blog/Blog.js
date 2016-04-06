@@ -1,40 +1,55 @@
-import React, { Component } from 'react';
-import BlogEntry from './BlogEntry';
-
+import React, { Component } from 'react'
+import BlogEntry from './BlogEntry'
+import { IconLoader } from '../Icons'
 import Rebase from 're-base'
-var base = Rebase.createClass('https://sergiofores.firebaseio.com/');
+let base = Rebase.createClass('https://sergiofores.firebaseio.com/')
+
 
 export default class Blog extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      blogPosts: []
+      blogPosts: [],
+      loading: true,
+      template: {}
     };
   }
 
   componentDidMount(){
-    this.blogRef = base.bindToState('blog', {
+    this.ref = base.fetch('blog', {
       context: this,
-      state: 'blogPosts',
-      asArray: true
+      asArray: true,
+      then(data) {
+        console.log(data)
+        this.setState({
+          loading: false,
+          blogPosts: data
+        })
+      }
+    });
+    this.tpl = base.fetch('site/header', {
+      context: this,
+      asArray: false,
+      then(data) {
+        this.setState({
+          template: data
+        })
+      }
     });
   }
 
-  componentWillUnmount(){
-    base.removeBinding(this.blogRef);
-  }
-
   render() {
-    console.log(this.state.blogPosts);
-    var blogPosts = this.state.blogPosts.map(function(data){
-        return <BlogEntry {...data} />
-    })
-
-    return (
-      <section>
-        <h2>Blog</h2>
-        {blogPosts}
-      </section>
-    )
+    let header = this.state.template.blog;
+    if (this.state.loading === true) { return  <IconLoader/> } else {
+      let blogPosts = this.state.blogPosts.map(function(data){
+          return <BlogEntry {...data} />
+      })
+      return (
+        <section>
+          <h1 className="Site__section-header">{header}</h1>
+          {blogPosts}
+        </section>
+      )
+    }
   }
 }

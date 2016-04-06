@@ -3,6 +3,14 @@
   fill: none;
   // width: 49px;
 }
+.icon-loader {
+  stroke: $color-base;
+  fill: none;
+  // width: 49px;
+  animation-name: loader;
+  animation-duration: .2s;
+  animation-iteration-count: infinite;
+}
 .icon-toggle {
   stroke: $color-black;
   fill: none;

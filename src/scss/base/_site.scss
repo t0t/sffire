@@ -4,6 +4,19 @@
   flex-wrap: wrap;
   justify-content: space-between;
 
+  &__section-header { //Encabezados de secciones
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $color-white;
+    background-color: $color-base;
+    min-height: 150px;
+    width: 100%;
+    font-weight: lighter;
+    padding-left: $base_spacing;
+    padding-right: $base_spacing;
+  }
+
   &__logo {
     margin-right: $base_spacing / 2;
     height: 50px;

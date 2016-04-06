@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import Rebase from 're-base'
-
 import ServicesEntry from './ServicesEntry'
+import Skills from '../skills/Skills'
+import { IconEmail } from '../Icons'
 
 var base = Rebase.createClass('https://sergiofores.firebaseio.com/');
 
@@ -9,31 +10,37 @@ export default class Services extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      pages: []
+      servicios: [],
+      template: {}
     };
   }
 
   componentDidMount() {
-    this.blogRef = base.bindToState('pages', {
-      context: this,
-      state: 'pages',
-      asArray: true
+    this.ref = base.fetch('servicios', {
+      context: this, asArray: true,
+      then(data) {
+        this.setState({ servicios: data })
+      }
+    });
+    this.tpl = base.fetch('site/header', {
+      context: this, asArray: false,
+      then(data) {
+        this.setState({ template: data })
+      }
     });
   }
 
-  componentWillUnmount() {
-    base.removeBinding(this.blogRef);
-  }
-
   render() {
-    console.log(this.state.pages);
-    var pages = this.state.pages.map( function(data) {
+    let header = this.state.template.servicios;
+    var servicios = this.state.servicios.map( function(data) {
         return <ServicesEntry {...data} />
     })
 
     return (
       <section>
-        {pages}
+        <h1 className="Site__section-header">{header}</h1>
+        <ul>{servicios}</ul>
+        <Skills />
       </section>
     )
   }
