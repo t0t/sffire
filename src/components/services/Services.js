@@ -38,7 +38,9 @@ export default class Services extends Component {
 
     return (
       <section>
-        <h1 className="Site__section-header">{header}</h1>
+        <div className="Site__section-header">
+          <h1>{header}</h1>
+        </div>
         <ul>{servicios}</ul>
         <Skills />
       </section>

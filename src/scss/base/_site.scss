@@ -1,20 +1,29 @@
 .Site {
-  margin: $base_spacing;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  // justify-content: space-between;
+  max-width: $bp1;
+  margin-left: auto;
+  margin-right: auto;
 
   &__section-header { //Encabezados de secciones
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    color: $color-white;
-    background-color: $color-base;
-    min-height: 150px;
     width: 100%;
-    font-weight: lighter;
-    padding-left: $base_spacing;
-    padding-right: $base_spacing;
+    background-color: $color-black;
+    h1 {
+      text-align: center;
+      padding: $base_spacing;
+      color: $color-white;
+      margin-bottom: 0;
+    }
+  }
+  &__section-header--home {
+    background-color: $color-base;
+    h1 {
+      color: $color-white;
+    }
   }
 
   &__logo {
@@ -41,27 +50,27 @@
     line-height: 1;
     height: 50px;
     flex: 0 100px;
+    margin-top: $base_spacing;
+    margin-left: $base_spacing;
   }
 
   &__footer {
     width: 100%;
-    // color: $color-base;
+    background-color: $color-black;
     padding: $base_spacing;
     font-size: 80%;
     line-height: 1;
     align-self: center;
     align-content: flex-end;
-    margin-top: $base_spacing;
-    // margin-bottom: 0;
-    border: 1px solid $color-black;
-
+    // margin-top: $base_spacing;
+    color: $color-white;
     h3 {
       margin-top: 0
     }
     a {
-      // color: $color-base;
+      color: $color-alt;
       &:hover {
-        color: $color_black;
+        color: $color_white;
       }
     }
   }

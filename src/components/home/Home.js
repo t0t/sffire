@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import Rebase from 're-base'
 
-import HomeContent from './HomeContent'
-
 var base = Rebase.createClass('https://sergiofores.firebaseio.com/');
 
 export default class Home extends Component {
@@ -14,26 +12,29 @@ export default class Home extends Component {
   }
 
   componentDidMount(){
-    this.blogRef = base.bindToState('home', {
+    this.ref = base.fetch('home', {
       context: this,
-      state: 'home',
-      asArray: true
+      asArray: false,
+      then(data) {
+        this.setState({
+          home: data
+        })
+      }
     });
   }
 
-  componentWillUnmount(){
-    base.removeBinding(this.blogRef);
-  }
-
   render() {
-    console.log(this.state.home);
-    var home = this.state.home.map(function(data){
-        return <HomeContent {...data} />
-    })
+    console.log(this.state.home)
+    let home = this.state.home;
 
     return (
-      <section>
-        {home}
+      <section className="Home">
+        <div className="Site__section-header Site__section-header--home">
+          <h1>{home.title}</h1>
+        </div>
+        {(home.img) ? <img src={home.img}/> : null}
+        {(home.p1) ? <p>{home.p1}</p> : null}
+        {(home.p2) ? <p>{home.p2}</p> : null}
       </section>
     )
   }
