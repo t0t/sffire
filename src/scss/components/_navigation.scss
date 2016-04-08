@@ -30,7 +30,10 @@
   position: fixed;
   top: 0;
   right: 0;
-  background-color: $color_alt;
+  background-color: transparent;
+  &:focus {
+    outline: none;
+  }
   @media screen and (min-width: $bp3) {
     display: none;
   }
@@ -45,6 +48,7 @@
     transition-property: opacity;
     transition-duration: .3s;
     transform: rotate(45deg);
+    z-index: 1000;
 
     & + .Nav-main {
       width: 100%;
@@ -58,7 +62,7 @@
       flex-direction: row;
       // justify-content: space-around;
       align-content: center;
-      background-color: $color-white-alpha;
+      background-color: $color-white;
       .Nav-main__item {
         text-align: center;
         flex: 1 100%;

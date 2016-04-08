@@ -1,27 +1,25 @@
-## SFFIRE
-Single Page App basada en ES6 y React que ataca una base de datos Firebase (BaaS).
+## SFFIRE Framework
+Este es mi propio framework de diseño y desarrollo. Es una Single Page App con arquitectura React/ES6 que consume una base de datos JSON por medio de la API de Firebase.
 
 :scream: [DEMO](http://t0t.github.io/sffire)
 
-## Divide y vencerás
-- Firebase BaaS (Backend as a Service)
-    - Datos en tiempo real por Websockets
-    - Te olvidas del Backend (el lado oscuro)
-    - Gratis hasta 100 usuarios simultaneos
-    - Basado en JSON !
-    - AUTH y usuarios of course...
-    - 1Gb hosting gratis
-- FrontEnd
-  - Javascript ES6
-  - React
+## Diseño Web UI
+- Wireframing y Guías de estilo
+- Animación UI con Principle
+- Diseño y Layout con Sketch
 
-## Conceptos
-- Arquitectura centrada en las vistas con React
-- Isomorphic rendering of Firebase data.
-- Convenciones:
-  - camelCase, BEM-style y Components
+## Desarrollo Front-end
+- Maquetación "responsive" y animación CSS
+- Javascript / ES6 / React
+- Preprocesado con Sass
 
-### Entorno local
+## Buenas prácticas
+- Mobile First
+- Separation of concerns
+- CamelCase, BEM...
+- Write well-formed, isolated modules - Reusable Components
+
+### Flujo de trabajo y Entorno local
 - Webpack (bundle, uglify, livereloading, etc)
 - CSS Preprocesado con Sass.
 - ES6 transcompilado con Babel
@@ -45,3 +43,13 @@ Single Page App basada en ES6 y React que ataca una base de datos Firebase (BaaS
 - [x] Implementar Iconos svg
 - [x] Menu active class item
 - [x] Create an SVG Icon System with React
+
+### External Services
+  - [Firebase](https://www.firebase.com/) Backend as a Service (BaaS)
+  - [Cloudinary](http://cloudinary.com/) Ofrece gestión de imagenes y video en la nube
+  - [Formspree](http://formspree.io) Forms Service
+
+Sergio Forés - Web UI Designer & Front-end Developer
+[Github](https://github.com/t0t/).
+[Linkedin](https://www.linkedin.com/in/sergiofores/).
+[Twitter](https://twitter.com/t0tinspire/) :ear_of_rice: Sergio Forés

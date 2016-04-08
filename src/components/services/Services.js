@@ -41,7 +41,7 @@ export default class Services extends Component {
         <div className="Site__section__header">
           <h1>{header}</h1>
         </div>
-        <ul>{servicios}</ul>
+        {servicios}
         <Skills />
       </section>
     )
